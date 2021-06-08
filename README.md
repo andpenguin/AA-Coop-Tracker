@@ -18,3 +18,9 @@ Usage:
 3. Visit your server ip in your web browser
   a. If you change the port variable in the first line of your parser.js file, you can access the website by visiting yourserverip:port
 4. When you play in your server, whenever the game saves by running /save-all, or by stopping the server, the webpage can be reloaded to display the advancements and subrcriteria completed.
+
+Project Credits:
+
+Tips and Formatting: Members of the AAdv Coop Discord: https://discord.gg/2bVR4xuCQG
+
+Images: DarwinBaker/CTM's Singleplayer AAdv Tool: https://github.com/DarwinBaker/AATool
