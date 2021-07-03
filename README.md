@@ -14,12 +14,11 @@ Installation:
 Usage:
 
 1. Enter the Tracker directory
-2. Run the following commands to install nodejs libraries
-
-  a. sudo apt install npm -g
-  b. sudo npm install express
-  c. sudo npm install socket.io
-  d. sudo npm install serve-favicon
+2. Run the following commands to install nodejs libraries 
+  a. sudo apt install npm -g 
+  b. sudo npm install express 
+  c. sudo npm install socket.io 
+  d. sudo npm install serve-favicon 
 4. Run sudo node ./server/parser.js
 5. Visit your server ip in your web browser
   a. If you change the port variable in the first line of your parser.js file, you can access the website by visiting yourserverip:port
