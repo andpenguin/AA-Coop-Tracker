@@ -26,6 +26,6 @@ Usage:
 
 Project Credits:
 
-Tips and Formatting and Favicon: Members of the AAdv Coop Discord: https://discord.gg/2bVR4xuCQG
+Tips, Formatting, and Favicon: Members of the AAdv Coop Discord: https://discord.gg/2bVR4xuCQG
 
 Images: DarwinBaker/CTM's Singleplayer AAdv Tool: https://github.com/DarwinBaker/AATool
