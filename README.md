@@ -15,6 +15,7 @@ Usage:
 
 1. Enter the Tracker directory
 2. Run the following commands to install nodejs libraries
+
   a. sudo apt install npm -g
   b. sudo npm install express
   c. sudo npm install socket.io
