@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+   <title>AA Coop Admin Dashboard</title>
+   <h1>Admin Dashboard</h1>
+   <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css"/>
+   <meta charset="utf-8">
+   <style>
+      h1 {
+      font-family: 'MinecraftiaRegular';
+      font-size: normal;
+      font-weight: normal;
+      font-style: normal;
+      margin-top: 2px;
+      }
+      button {
+      font-family: 'MinecraftiaRegular';
+      font-size: large;
+      font-weight: normal;
+      font-style: normal;
+      border-radius: 5px;
+      color: black;
+      width: 428px;
+      height: 500px;
+      }
+      html {
+         background-color: rgb(212, 212, 212);
+      }
+   </style>
+<body>
+   <button class="button" id="download" style="margin-right: 1px;"  onclick=download()>Download World</button>
+   <button class="button" id="reset" style="background-color: rgb(0,204,0)"; id="reset" onclick=toggleReset()>Resetting: On</button>
+   <button class="button" id="toggle" onclick=toggle()>Turn Off MC Server</button>
+   <div style="height: 5px"></div>
+   <button onclick=leave() style="margin-right: 3px; border: 1px solid; display: block; width: 1295px; height: 100px; background-color: rgb(212, 212, 212)">Return Home</button>
+   <script src="https://cdn.socket.io/4.1.1/socket.io.min.js"></script>
+   <script>
+      var socket = io.connect(window.origin);
+      var toggleServer = false;
+
+      function download() {
+         var check = confirm("Are you sure you want to download the world? Doing so can invalidate the run if done before completion!")
+         if (check) {
+            socket.emit("zip");
+            window.location.href = "http://" + document.domain + "/world";
+         }
+      }
+      
+      function leave() {
+         window.location.href = "http://" + document.domain;
+      }
+
+      function toggleReset() {
+         button = document.getElementById("reset")
+         if (button.style.backgroundColor == "") {
+            button.style.backgroundColor = "#00cc00"
+            button.innerHTML = "Resetting: On"
+         }
+         else {
+            button.style.backgroundColor = ""
+            button.innerHTML = "Resetting: Off"
+         }
+         socket.emit("reset", (button.style.backgroundColor != ""));
+      }
+      
+      function toggle() {
+         socket.emit("server", (toggleServer))
+         toggleServer = !toggleServer
+      }
+   </script>
+</body>
+</head>
+</html>
