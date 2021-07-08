@@ -14,18 +14,26 @@ Installation:
 Usage:
 
 1. Enter the Tracker directory
-2. Run the following commands to install nodejs libraries 
+3. Run the following commands to install nodejs libraries 
   a. sudo apt install npm -g 
   b. sudo npm install express 
   c. sudo npm install socket.io 
   d. sudo npm install serve-favicon 
-4. Run sudo node ./server/parser.js
-5. Visit your server ip in your web browser
+  e. sudo npm install ejs
+4. OPTIONAL - Set up the tracker.service file to run the website on boot
+  a. sudo mv tracker.service /etc/systemd/system
+  b. sudo nano /etc/systemd/system/tracker.service
+  c. change YOUR_PASSWORD_HERE to a password of your choice
+  d. The default file pathing for the service is /var/minecraft/Tracker(Version) in accordance with https://github.com/Civitello/MCSRS, but if you are using the website only, you can change the pathing to whatever file path is correct for you
+5. Run sudo node ./server/parser.js
+6. Visit your server ip in your web browser
   a. If you change the port variable in the first line of your parser.js file, you can access the website by visiting yourserverip:port
-4. When you play in your server, whenever the game saves by running /save-all, or by stopping the server, the webpage can be reloaded to display the advancements and subrcriteria completed.
+7. When you play in your server, whenever the game saves by running /save-all, or by stopping the server, the webpage can be reloaded to display the advancements and subrcriteria completed.
 
 Project Credits:
 
 Tips, Formatting, and Favicon: Members of the AAdv Coop Discord: https://discord.gg/2bVR4xuCQG
 
 Images: DarwinBaker/CTM's Singleplayer AAdv Tool: https://github.com/DarwinBaker/AATool
+
+Contant me on Discord: and_penguin#7114
