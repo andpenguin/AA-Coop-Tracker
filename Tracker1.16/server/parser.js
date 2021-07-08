@@ -27,8 +27,7 @@ app.get("/admin", (req, res) => {
     if (authorized) {
         res.render("admin");
         authorized = false
-    }
-    else {
+    } else {
         res.status(404).render("404err")
     }
 });
@@ -37,8 +36,7 @@ app.get("/world", (req, res) => {
     fs.readFile(process.cwd() + '/world.zip', (err) => {
         if (err || !download) {
             res.status(404).render("404err")
-        }
-        else {
+        } else {
             res.download(process.cwd() + "/world.zip")
             download = false;
         }
@@ -58,24 +56,26 @@ server.listen(port, () => {
 io.on("connection", (socket) => {
     loadAdvancements(socket);
     console.log("New client: " + socket.id + " connected");
-    
+
     socket.on("zip", () => {
-        child.execSync('zip -r ' + process.cwd() + '/world.zip *' , {
-            cwd:  process.cwd() + '/' + folder + '/world'
-        });
+        try {
+            child.execSync('zip -r ' + process.cwd() + '/world.zip *', {
+                cwd: process.cwd() + '/' + folder + '/world'
+            });
+        } catch {
+            console.log("No World Found");
+        }
         download = true;
     });
     socket.on("reset", (toggle) => { // When toggle reset button is pressed
         try {
             if (toggle) { // If it is toggled on
                 child.execSync('sudo systemctl enable mcreset')
-            }
-            else { // If it is toggled off
+            } else { // If it is toggled off
                 child.execSync('sudo systemctl stop mcreset')
                 child.execSync('sudo systemctl disable mcreset')
             }
-        }
-        catch{}
+        } catch {}
     });
     socket.on("server", (toggle) => { // When server enabling is toggled
         try {
@@ -83,11 +83,10 @@ io.on("connection", (socket) => {
                 child.execSync('sudo systemctl enable minecraft')
             else // If it is turned off
                 child.execSync('sudo systemctl stop minecraft')
-        }
-        catch{}
+        } catch {}
     });
     socket.on("password", (pass) => {
-       if (pass === password) {
+        if (pass === password) {
             authorized = true
             socket.emit("authorize")
         }
@@ -230,9 +229,7 @@ function igt(playerid, socket) {
                 hours + ':' + minutes + ':' + seconds
             ]
             socket.emit("igt", data); // Return is HH : MM : SS
-        }
-        catch{
-        }
+        } catch {}
     });
 }
 
@@ -255,7 +252,7 @@ function loadAdvancements(socket) { // goes through each advancement of each pla
             for (i = 0; i < advancementlist.length; i++) { // go through each advancement
                 isDone(uuids[x], advancementlist[i], socket, players[x]); // check if it is done
             }
-                igt(uuids[x], socket);
+            igt(uuids[x], socket);
         }
     });
 }
