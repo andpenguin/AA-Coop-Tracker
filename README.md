@@ -15,7 +15,8 @@ Usage:
 
 1. Enter the Tracker directory
 3. Run the following commands to install nodejs libraries 
-  a. sudo apt install npm -g 
+  a. sudo apt install npm
+  b. sudo apt install zip
   b. sudo npm install express 
   c. sudo npm install socket.io 
   d. sudo npm install serve-favicon 
