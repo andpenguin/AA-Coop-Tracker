@@ -2,7 +2,7 @@
 
 Installation:
 
-1. Transfer transfer and unzip the files to your server
+1. Transfer and unzip the files to your server
 2. Move or download your vanilla (or modded) server into the Tracker directory - NOTE THAT THIS CAN AFFECT THE FILE PATH THAT OTHER PROGRAMS MAY USE
 3. Either rename your server folder to Vanilla 1.(verision), or using edit the second line of the parser.js file in the server directory
   a. Open the file, either in a text editor or IDE, or using the nano command in the command line
