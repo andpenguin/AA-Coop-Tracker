@@ -2,7 +2,7 @@
 
 Installation:
 
-1. Transfer and unzip the files to your server
+1. Transfer the zip file to your server, and unzip it
 2. Move or download your vanilla (or modded) server into the Tracker directory - NOTE THAT THIS CAN AFFECT THE FILE PATH THAT OTHER PROGRAMS MAY USE
 3. Install Nodejs in your server by running sudo apt install nodejs 
 4. Run the following commands to install nodejs libraries 
