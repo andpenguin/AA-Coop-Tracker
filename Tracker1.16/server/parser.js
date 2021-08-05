@@ -1,5 +1,5 @@
 const port = "80";
-const folder = "vanilla1.16";
+var folder = "vanilla1.16";
 var password = "password"
 const express = require('express');
 const app = express();
