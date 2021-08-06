@@ -8,10 +8,10 @@ Installation:
 4. Run the following commands to install nodejs libraries 
   a. sudo apt install npm
   b. sudo apt install zip
-  b. sudo npm install express 
-  c. sudo npm install socket.io 
-  d. sudo npm install serve-favicon 
-  e. sudo npm install ejs
+  c. sudo npm install express 
+  d. sudo npm install socket.io 
+  e. sudo npm install serve-favicon 
+  f. sudo npm install ejs
 5. OPTIONAL - Set up the tracker.service file to run the website on boot (allowing you to skip steps 1 and 2 of Usage)
   a. sudo mv tracker.service /etc/systemd/system
   b. sudo nano /etc/systemd/system/tracker.service
