@@ -16,7 +16,9 @@ Installation:
   a. sudo mv tracker.service /etc/systemd/system
   b. sudo nano /etc/systemd/system/tracker.service
   c. change YOUR_PASSWORD_HERE to a password of your choice, and YOUR_FOLDER_HERE to the name of your MC server folder
-  d. The default file pathing for the service is /var/minecraft/Tracker(Version) in accordance with https://github.com/Civitello/MCSRS, but if you are using the website only, you can change the pathing to whatever file path is correct for you
+  d. The default file pathing for the service is /var/minecraft/Tracker(Version) in accordance with https://github.com/Civitello/MCSRS, but if you are using the
+  website only, you can change the pathing to whatever file path is correct for you
+  e. sudo systemctl enable tracker
 6. Make sure you open your server's firewall at the port that the website runs on (Default port is 80, but can be changed in the first line of parser.js)
 
 
