@@ -50,7 +50,7 @@ app.use(function(req, res, next) {
 
 server.listen(port, () => {
     console.log("Server is running at Port: " + port)
-    if (process.argv[2] = "-p" && process.argv.length == 4)
+    if (process.argv[2] = "-p" && process.argv.length > 3)
         password = process.argv[3]
     if (process.argv[4] = "-f" && process.argv.length > 5)
         folder = process.argv[5]
