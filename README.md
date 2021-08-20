@@ -7,13 +7,13 @@ The AA Coop Tracker reads advancements in your server (which save every 5 minute
 
 It also has bonus features that help with managing runs in the Admin Dashboard such as downloading your world file remotely, and controlling when your server should reset worlds (https://github.com/Civitello/MCSRS)
 
-##Contributions:
+<h1>Contributions</h1>
 
 If you would like to contribute any suggestions, Contact me on Discord: and_penguin#7114. I'll consider adding new features by popular demand, so just tell me if you want something new
 
-If you want to support me and the project, any contributions to my PayPal are greatly appreciated. The project will always be free and open source, but any donations are extremely welcome, and will get your name added to the bottom of everyone's trackers.
+If you want to support me and the project, any contributions to my PayPal [here](https://www.paypal.com/donate?hosted_button_id=YHS2HDH2G4K62) are greatly appreciated. The project will always be free and open source, but any donations are extremely welcome, and will get your name added to the bottom of everyone's trackers.
 
-##Automatic Installation
+<h1>Automatic Installation</h1>
 
 Using the trackerserver_installation.sh script, installating the combo of the multi instance resetting server and the tracker at once (which are designed to go hand in hand as the tracker has controls that manage the resetting), installation as of v1.2.0 is now super simple! (Scripts for 1.17 are coming soon)
 
@@ -28,7 +28,7 @@ Similarly, when it opens tracker.service change the value after "-p" (YOUR_PASSW
 
 Now, whenever you start up that server (or an image of it), the tracker, alongside the auto resetting MC servers will launch automatically!
 
-#Speedrun Legality
+<h2>Speedrun Legality</h2>
 
 As with CTM and other's trackers, this tool only reads the advancements and statistics files (as well as the list of players in usercache.json) which is allowed per speedrun.com rules. This program is not a mod, datapack, or client, and simply functions as an external server-side application.
 
@@ -36,7 +36,7 @@ It is also designed to help you follow the latest AA and AA coop rules by lettin
 
 The Tracker has been used in several AA Coop WRs, and if moderators wish to ask questions about the code or intentions of the project as a whole, they are welcome to.
 
-#Manual Installation:
+<h2>Manual Installation</h2>
 
 1. Transfer the zip file to your server, and unzip it
 2. Move or download your vanilla (or modded) server into the Tracker directory - NOTE THAT THIS CAN AFFECT THE FILE PATH THAT OTHER PROGRAMS MAY USE
@@ -58,7 +58,7 @@ The Tracker has been used in several AA Coop WRs, and if moderators wish to ask 
 6. Make sure you open your server's firewall at the port that the website runs on (Default port is 80, but can be changed in the first line of parser.js)
 
 
-#Manual Usage:
+<h2>Manual Usage:</h2>
 
 1. Enter the Tracker directory
 2. Run sudo node ./server/parser.js -p [your passsword] -f [your mc folder name]
