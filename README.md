@@ -1,7 +1,7 @@
 # AA-Coop-Tracker
 <img width="1436" alt="Screen Shot 2021-08-19 at 10 16 04 PM" src="https://user-images.githubusercontent.com/71165067/130183018-c9116a3a-f11c-460c-a0c2-281fbc64eeb8.png">
 
-##What does the AA Coop Tracker do?
+<h1>What does the AA Coop Tracker do?</h1>
 
 The AA Coop Tracker reads advancements in your server (which save every 5 minutes, or on /save-all, not on hitting escape like in singleplayer) compiles all players completed ones, and displays them on a website acessible to anyone with the server ip.
 
