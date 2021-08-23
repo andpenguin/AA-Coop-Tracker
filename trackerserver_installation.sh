@@ -30,8 +30,11 @@ sudo chown minecraft.minecraft -R /var/minecraft/
 cd /etc/systemd/system
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/mcreset.service
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/minecraft.service
+sed -i '20s/.*/ReadWriteDirectories=/var/minecraft/Tracker1.16/minecraft/' minecraft.service
+sed -i '21s/.*/WorkingDirectory=/var/minecraft/Tracker1.16/minecraft/' minecraft.service
 cd /var/minecraft
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/mcreset.sh
+sed -i '2s/.*/MC_FOLDER="/var/minecraft/Tracker1.16/minecraft"/' mcreset.sh
 sudo chmod +x mcreset.sh
 sudo wget -O tracker.zip https://github.com/andpenguin/AA-Coop-Tracker/releases/download/v1.2.0-beta/Tracker1.16v1.2.0-beta.zip
 sudo apt install zip
