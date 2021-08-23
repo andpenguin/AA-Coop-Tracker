@@ -1,5 +1,6 @@
 #!/bin/bash
 sudo apt -y update && sudo apt -y install default-jre screen
+sudo apt install openjdk-16-jre openjdk-16-jre
 sudo mkdir /usr/games/minecraft
 cd /usr/games/minecraft
 sudo wget https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.7.3/fabric-installer-0.7.3.jar
@@ -9,8 +10,8 @@ sudo chown ubuntu eula.txt
 echo "eula=true" > eula.txt
 cd mods
 sudo wget https://github.com/mrmangohands/krypton/releases/download/mc1.16.1-0.1.3-SNAPSHOT%2B2021-02-20/krypton-1.16.1-backport-0.1.3-SNAPSHOT+2021-02-20.jar
-sudo wget  https://github.com/CaffeineMC/lithium-fabric/releases/download/mc1.16.1-0.5.1/lithium-fabric-mc1.16.1-0.5.1.jar
-sudo wget https://github.com/CaffeineMC/phosphor-fabric/releases/download/mc1.16.1-v0.6.0/phosphor-fabric-mc1.16.1-0.6.0+build.7.jar
+sudo wget https://github.com/CaffeineMC/lithium-fabric/releases/download/mc1.16.1-0.5.1/lithium-fabric-mc1.16.1-0.5.1.jar
+sudo wget https://github.com/PaperMC/Starlight/releases/download/1.0.0-RC2/starlight-fabric-1.0.0-RC2-1.16.x.jar
 cd ..
 sudo nano server.properties
 cd ..
