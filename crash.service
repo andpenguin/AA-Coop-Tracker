@@ -1,0 +1,8 @@
+[Unit]
+Description=Minecraft Reset
+
+[Service]
+ExecStart=/var/minecraft/crash.sh
+
+[Install]
+WantedBy=multi-user.target
