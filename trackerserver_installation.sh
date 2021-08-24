@@ -10,7 +10,7 @@ sudo chown ubuntu eula.txt
 echo "eula=true" > eula.txt
 cd mods
 sudo wget https://github.com/mrmangohands/krypton/releases/download/mc1.16.1-0.1.3-SNAPSHOT%2B2021-02-20/krypton-1.16.1-backport-0.1.3-SNAPSHOT+2021-02-20.jar
-sudo wget https://github.com/CaffeineMC/lithium-fabric/releases/download/mc1.16.1-0.5.1/lithium-fabric-mc1.16.1-0.5.1.jar
+sudo wget  https://github.com/CaffeineMC/lithium-fabric/releases/download/mc1.16.1-0.5.1/lithium-fabric-mc1.16.1-0.5.1.jar
 sudo wget https://github.com/PaperMC/Starlight/releases/download/1.0.0-RC2/starlight-fabric-1.0.0-RC2-1.16.x.jar
 cd ..
 sudo nano server.properties
@@ -30,12 +30,12 @@ sudo chown minecraft.minecraft -R /var/minecraft/
 cd /etc/systemd/system
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/mcreset.service
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/minecraft.service
-sed -i '20s/.*/ReadWriteDirectories=/var/minecraft/Tracker1.16/minecraft/' minecraft.service
-sed -i '21s/.*/WorkingDirectory=/var/minecraft/Tracker1.16/minecraft/' minecraft.service
+sudo wget https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/crash.service
 cd /var/minecraft
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/mcreset.sh
-sed -i '2s/.*/MC_FOLDER="/var/minecraft/Tracker1.16/minecraft"/' mcreset.sh
 sudo chmod +x mcreset.sh
+sudo wget https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/crash.sh
+sudo chmod +x crash.sh
 sudo wget -O tracker.zip https://github.com/andpenguin/AA-Coop-Tracker/releases/download/v1.2.0-beta/Tracker1.16v1.2.0-beta.zip
 sudo apt install zip
 sudo unzip tracker.zip
