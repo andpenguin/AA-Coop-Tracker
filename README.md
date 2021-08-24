@@ -18,10 +18,9 @@ If you want to support me and the project, any contributions to my PayPal [here]
 
 Using the trackerserver_installation.sh script, installating the combo of the multi instance resetting server and the tracker at once (which are designed to go hand in hand as the tracker has controls that manage the resetting), installation as of v1.2.0 is now super simple! (Scripts for 1.17 are coming soon)
 
-Just open up an Ubuntu server, and run these four commands:
+Just open up an Ubuntu server, and run these three commands:
 sudo wget -O installer.sh https://github.com//andpenguin/AA-Coop-Tracker/releases/download/v1.2.0-beta/trackerserver_installation.sh
-sudo chown ubuntu installer.sh
-chmod +x installer.sh
+sudo chmod +x installer.sh
 ./installer.sh
 
 The installation will prompt you to edit server.properties to your desired settings, after which you can save and exit the file
