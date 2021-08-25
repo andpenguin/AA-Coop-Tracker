@@ -30,12 +30,9 @@ sudo chown minecraft.minecraft -R /var/minecraft/
 cd /etc/systemd/system
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/mcreset.service
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/minecraft.service
-sed -i 's/# /var/minecraft/minecraft//var/minecraft/Tracker1.16/minecraft/' minecraft.service
-sed -i '21s/.*/WorkingDirectory=/var/minecraft/Tracker1.16/minecraft/' minecraft.service
 sudo wget https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/crash.service
 cd /var/minecraft
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/mcreset.sh
-sed -i 's/# /var/minecraft/minecraft//var/minecraft/Tracker1.16/minecraft/' mcreset.sh
 sudo chmod +x mcreset.sh
 sudo wget https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/crash.sh
 sudo chmod +x crash.sh
@@ -57,4 +54,3 @@ sudo nano /etc/systemd/system/tracker.service
 sudo systemctl enable tracker
 sudo systemctl daemon-reload
 sudo systemctl enable mcreset
-sudo reboot now
