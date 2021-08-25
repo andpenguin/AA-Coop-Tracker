@@ -30,7 +30,8 @@ sudo chown minecraft.minecraft -R /var/minecraft/
 cd /etc/systemd/system
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/mcreset.service
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/minecraft.service
-sudo sed -i 's/ReadWriteDirectories=\/var\/minecraft\/minecraft/ReadWriteDirectories=\/var\/minecraft\/Tracker1.16\/minecraft/' mcreset.shsudo sed -i 's/WorkingDirectory=\/var\/minecraft\/minecraft/WorkingDirectory=\/var\/minecraft\/Tracker1.16\/minecraft/' mcreset.sh
+sudo sed -i 's/ReadWriteDirectories=\/var\/minecraft\/minecraft/ReadWriteDirectories=\/var\/minecraft\/Tracker1.16\/minecraft/' minecraft.service
+sudo sed -i 's/WorkingDirectory=\/var\/minecraft\/minecraft/WorkingDirectory=\/var\/minecraft\/Tracker1.16\/minecraft/' minecraft.service
 sudo wget https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/crash.service
 cd /var/minecraft
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/mcreset.sh
