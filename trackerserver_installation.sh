@@ -34,7 +34,8 @@ sudo sed -i 's/ReadWriteDirectories=\/var\/minecraft\/minecraft/ReadWriteDirecto
 sudo wget https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/crash.service
 cd /var/minecraft
 sudo wget https://raw.githubusercontent.com/Civitello/MCSRS/main/mcreset.sh
-sudo sed -i 's/MC_FOLDER="\/var\/minecraft\/minecraft"/MC_FOLDER="\/var\/minecraft\/Tracker1.16\/minecraft"/' mcreset.shsudo chmod +x mcreset.sh
+sudo sed -i 's/MC_FOLDER="\/var\/minecraft\/minecraft"/MC_FOLDER="\/var\/minecraft\/Tracker1.16\/minecraft"/' mcreset.sh
+sudo chmod +x mcreset.sh
 sudo wget https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/crash.sh
 sudo chmod +x crash.sh
 sudo wget -O tracker.zip https://github.com/andpenguin/AA-Coop-Tracker/releases/download/v1.2.0-beta/Tracker1.16v1.2.0-beta.zip
