@@ -1,5 +1,5 @@
 [Unit]
-Description=Minecraft Reset
+Description=Minecraft Crash Protection
 
 [Service]
 ExecStart=/var/minecraft/crash.sh
