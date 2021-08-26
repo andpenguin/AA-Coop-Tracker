@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+   <title>AA Coop Admin Dashboard</title>
+   <h1>Admin Dashboard</h1>
+   <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css"/>
+   <meta charset="utf-8">
+   <style>
+      h1 {
+      font-family: 'MinecraftiaRegular';
+      font-size: normal;
+      font-weight: normal;
+      font-style: normal;
+      margin-top: 2px;
+      }
+      button {
+      font-family: 'MinecraftiaRegular';
+      font-size: large;
+      font-weight: normal;
+      font-style: normal;
+      border-radius: 5px;
+      color: black;
+      width: 428px;
+      height: 500px;
+      }
+      html {
+         background-color: rgb(212, 212, 212);
+      }
+   </style>
+<body>
+   <button class="button" id="download" style="margin-right: 1px;"  onclick=download()>Download World</button>
+   <button class="button" id="reset" style="background-color: rgb(0,204,0)"; id="reset" onclick=toggleReset()>Resetting: On</button>
+   <div style="height: 5px"></div>
+   <button onclick=leave() style="margin-right: 3px; border: 1px solid; display: block; width: 1295px; height: 100px; background-color: rgb(212, 212, 212)">Return Home</button>
+   <script src="https://cdn.socket.io/4.1.1/socket.io.min.js"></script>
+   <script>
+      var socket = io.connect(window.origin); // On client loading, connect to the server
+
+      socket.emit("ping"); // Get Resetting Status
+
+      socket.on("pong", (status) =>{ // When Resetting Status is recieved
+         if (!status) { // If it is off
+            var button = document.getElementById("reset"); // Get the button
+            button.style.backgroundColor = "" // Change the color to grey
+            button.innerHTML = "Resetting: Off" // Mark resetting as off
+         }
+      });
+
+      // Downloads the World Files
+      function download() {
+         var check = confirm("Are you sure you want to download the world? Doing so can invalidate the run if done before completion!") // Gives an alert warning
+         if (check) { // If alert is accepted
+            socket.emit("zip"); // Ask server to zip the files
+            window.location.href = "http://" + document.domain + "/world"; // Go to the download location
+         }
+      }
+      
+      // Returns Home
+      function leave() {
+         window.location.href = "http://" + document.domain;
+      }
+
+      // Turns off Resetting and Enables Crash Protection
+      function toggleReset() {
+         button = document.getElementById("reset"); // Get the button
+         if (button.style.backgroundColor != "") { // If resetting is on
+            button.style.backgroundColor = "" // Make it grey
+            button.innerHTML = "Resetting: Off" // Change the text
+            socket.emit("reset", (false)); // Tell the server to turn off resetting
+         }
+      }
+   </script>
+</body>
+</head>
+</html>
