@@ -5,7 +5,7 @@ Description=AA Coop Tracker
 InaccessibleDirectories=/root /sys /srv -/opt /media -/lost+found
 ReadWriteDirectories=/var/minecraft/Tracker1.17
 WorkingDirectory=/var/minecraft/Tracker1.17
-ExecStart=/usr/bin/sudo /usr/bin/node /var/minecraft/Tracker1.17/server/parser.js -p YOUR_PASSWORD_HERE -f YOUR_FOLDER_HERE
+ExecStart=/usr/bin/sudo /usr/bin/node /var/minecraft/Tracker1.17/server/parser.js -p YOUR_PASSWORD_HERE
 
 [Install]
 WantedBy=multi-user.target
