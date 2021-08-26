@@ -39,7 +39,7 @@ sudo sed -i 's/MC_FOLDER="\/var\/minecraft\/minecraft"/MC_FOLDER="\/var\/minecra
 sudo chmod +x mcreset.sh
 sudo wget https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/crash.sh
 sudo chmod +x crash.sh
-sudo wget -O tracker.zip https://github.com/andpenguin/AA-Coop-Tracker/releases/download/v1.2.0-beta/Tracker1.16v1.2.0-beta.zip
+sudo wget -O tracker.zip https://github.com/andpenguin/AA-Coop-Tracker/releases/download/v1.2.0-beta/Tracker1.16v1.2.1-beta.zip
 sudo apt install zip
 sudo unzip tracker.zip
 sudo rm tracker.zip
