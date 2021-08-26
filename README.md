@@ -18,13 +18,18 @@ If you want to support me and the project, any contributions to my PayPal [here]
 
 Using the trackerserver_installation.sh script, installating the combo of the multi instance resetting server and the tracker at once (which are designed to go hand in hand as the tracker has controls that manage the resetting), installation as of v1.2.0 is now super simple! (Scripts for 1.17 are coming soon)
 
-Just open up an Ubuntu server, and run these three commands:
+Just open up an Ubuntu server open port 80 on the firewall, and run these three commands:
+
+<h2>1.16 Installation</h2>
 sudo wget -O installer.sh https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/trackerserver_installation.sh
 sudo chmod +x installer.sh
 ./installer.sh
 
 The installation will prompt you to edit server.properties to your desired settings, after which you can save and exit the file
-Similarly, when it opens tracker.service change the value after "-p" (YOUR_PASSWORD_HERE) to your desired admin password, and after "-f" (YOUR_FOLDER_HERE) to the name of your MC server folder (in the case of automatic installation, it will be "minecraft" as is default with Fabric Servers)
+Similarly, when it opens tracker.service change the value after "-p" (YOUR_PASSWORD_HERE) to your desired admin password.
+
+<h2> 1.17 Installation</h2>
+Automatic Script Coming soon, see manual installation
 
 Now, whenever you start up that server (or an image of it), the tracker, alongside the auto resetting MC servers will launch automatically!
 
