@@ -3,7 +3,7 @@ sudo apt -y update && sudo apt -y install default-jre screen
 sudo apt install openjdk-16-jre openjdk-16-jre
 sudo mkdir /usr/games/minecraft
 cd /usr/games/minecraft
-sudo wget https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.7.3/fabric-installer-0.7.3.jar
+sudo wget https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.7.4/fabric-installer-0.7.4.jar
 sudo java -jar fabric-installer-0.7.3.jar server -mcversion 1.16.1 -downloadMinecraft
 sudo java -Xmx14G -Xms14G -jar fabric-server-launch.jar nogui
 sudo chown ubuntu eula.txt
