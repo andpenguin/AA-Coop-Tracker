@@ -9,8 +9,10 @@ sudo java -Xmx14G -Xms14G -jar fabric-server-launch.jar nogui
 sudo chown ubuntu eula.txt
 echo "eula=true" > eula.txt
 cd mods
+sudo wget https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar
+sudo wget https://github.com/modmuss50/Voyager/releases/download/1.0.0/voyager-1.0.0.jar
+sudo wget https://github.com/mrmangohands/lithium-fabric/releases/download/mc1.16.1-0.6.6/lithium-1.16.1-backport-fabric-0.6.6.jar
 sudo wget https://github.com/mrmangohands/krypton/releases/download/mc1.16.1-0.1.3-SNAPSHOT%2B2021-02-20/krypton-1.16.1-backport-0.1.3-SNAPSHOT+2021-02-20.jar
-sudo wget  https://github.com/CaffeineMC/lithium-fabric/releases/download/mc1.16.1-0.5.1/lithium-fabric-mc1.16.1-0.5.1.jar
 sudo wget https://github.com/PaperMC/Starlight/releases/download/1.0.0-RC2/starlight-fabric-1.0.0-RC2-1.16.x.jar
 cd ..
 sudo nano server.properties
