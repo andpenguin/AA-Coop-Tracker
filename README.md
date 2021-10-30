@@ -29,7 +29,9 @@ The installation will prompt you to edit server.properties to your desired setti
 Similarly, when it opens tracker.service change the value after "-p" (YOUR_PASSWORD_HERE) to your desired admin password.
 
 <h2> 1.17 Installation</h2>
-Automatic Script Coming soon, see manual installation
+sudo wget -O installer.sh https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/trackerserver_installation_1_17.sh
+sudo chmod +x installer.sh
+./installer.sh
 
 Now, whenever you start up that server (or an image of it), the tracker, alongside the auto resetting MC servers will launch automatically!
 
