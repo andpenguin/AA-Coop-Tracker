@@ -20,13 +20,13 @@ Using the trackerserver_installation.sh script, installating the combo of the mu
 
 Just open up an Ubuntu server open port 80 on the firewall, and run these three commands:
 
+The installation will prompt you to edit server.properties to your desired settings, after which you can save and exit the file
+Similarly, when it opens tracker.service change the value after "-p" (YOUR_PASSWORD_HERE) to your desired admin password.
+
 <h2>1.16 Installation</h2>
 sudo wget -O installer.sh https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/trackerserver_installation.sh
 sudo chmod +x installer.sh
 ./installer.sh
-
-The installation will prompt you to edit server.properties to your desired settings, after which you can save and exit the file
-Similarly, when it opens tracker.service change the value after "-p" (YOUR_PASSWORD_HERE) to your desired admin password.
 
 <h2> 1.17 Installation</h2>
 sudo wget -O installer.sh https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/trackerserver_installation_1_17.sh
