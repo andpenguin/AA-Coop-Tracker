@@ -9,10 +9,11 @@ sudo java -Xmx14G -Xms14G -jar fabric-server-launch.jar nogui
 sudo chown ubuntu eula.txt
 echo "eula=true" > eula.txt
 cd mods
-sudo wget https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.17.1-0.7.4/lithium-fabric-mc1.17.1-0.7.4.jar
-sudo wget https://cdn.modrinth.com/data/H8CaAYZC/versions/Starlight%201.0.0%201.17.x/starlight-1.0.0+fabric.73f6d37.jar
-sudo wget https://github.com/astei/krypton/releases/download/v0.1.4/krypton-0.1.4.jar
+sudo wget https://github.com/mrmangohands/krypton/releases/download/mc1.16.1-0.1.3-SNAPSHOT%2B2021-02-20/krypton-1.16.1-backport-0.1.3-SNAPSHOT+2021-02-20.jar
+sudo wget  https://github.com/CaffeineMC/lithium-fabric/releases/download/mc1.16.1-0.5.1/lithium-fabric-mc1.16.1-0.5.1.jar
+sudo wget https://github.com/PaperMC/Starlight/releases/downlosad/1.0.0-RC2/starlight-fabric-1.0.0-RC2-1.16.x.jar
 sudo wget https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.2/lazydfu-0.1.2.jar
+
 cd ..
 sudo nano server.properties
 cd ..
@@ -39,13 +40,13 @@ sudo sed -i 's/MC_FOLDER="\/var\/minecraft\/minecraft"/MC_FOLDER="\/var\/minecra
 sudo chmod +x mcreset.sh
 sudo wget https://raw.githubusercontent.com/andpenguin/AA-Coop-Tracker/main/crash.sh
 sudo chmod +x crash.sh
-sudo wget -O tracker.zip https://github.com/andpenguin/AA-Coop-Tracker/releases/download/v1.2.1-beta/Tracker1.17v1.2.1-beta.zip
+sudo wget -O tracker.zip https://github.com/andpenguin/AA-Coop-Tracker/releases/download/v1.2.1-beta/Tracker1.16v1.2.1-beta.zip
 sudo apt install zip
 sudo unzip tracker.zip
 sudo rm tracker.zip
-sudo mv minecraft Tracker1.17
+sudo mv minecraft Tracker1.16
 sudo apt install nodejs
-cd Tracker1.17
+cd Tracker1.16
 sudo apt install npm
 sudo apt install zip
 sudo npm install express
